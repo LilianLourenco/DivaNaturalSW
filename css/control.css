@@ -1,0 +1,99 @@
+.container{
+
+    min-height: 800px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+     
+    
+}
+
+
+
+input {
+  
+    height: 45px;
+   display: block;
+   width: 400px;
+   margin: 10px;
+   border-radius: 1px;
+   border: 1px solid #000;
+   font-size: 16pt;
+   padding: 10px 20px;
+   background-color: rgba (255,255,255,0,0.1);
+   outline: none;
+}             
+.cont{
+    margin-top: 100px;
+}
+
+div#form-body{
+    
+    width: 420px;
+    margin: 150px auto 0px auto;
+}
+
+
+/*body{
+    background-image: url("../images/img-login" );
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+   
+    
+    
+}*/
+
+
+
+
+a{
+    text-align: center;
+    color: black;
+    font-size: 16pt;
+    text-decoration: none;
+    display: block;
+   
+}
+
+input[type=submit]{
+   background-color: #10707f;
+   border: none;
+   color: white;
+   outline: none;
+}
+
+
+.main-menu ul li{
+    float: left;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-menu ul li:hover{
+    font-size: 24px;
+    color: #e83e8c;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+.sub-menu{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+#sex1{
+    width: 5px;
+    height: 5px;
+    padding: 30px;
+}

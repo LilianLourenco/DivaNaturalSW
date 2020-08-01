@@ -1,0 +1,79 @@
+/* CSS Document */
+
+#lista{
+	font: 13px Verdana, Geneva, sans-serif;
+	border: 1px solid #999;
+	padding: 10px;
+	float: left;
+        width: 300px;
+	/* height: 400px; */
+   
+}
+
+#lista .product{
+	height: 16px;
+        
+  
+}
+
+#lista .product + .product{
+	margin: 15px 0 0 0;
+}
+
+#lista .product img{
+	border: 0;
+        
+}
+
+#lista .product .nome{
+	float: left;
+	width: 65%;
+}
+
+#lista .product .editar{
+	float: left;
+	margin: 0 0 0 10px;
+        width: 10%;
+}
+
+#lista .product .excluir{
+	float: left;
+	margin: 0 0 0 10px;
+        width: 10%; 
+}
+
+#formulario{
+	float: left;
+	width: 300px;
+	margin: 0 0 0 20px;
+        
+}
+
+#formulario label{
+	font: 13px Verdana, Geneva, sans-serif;
+        
+}
+
+#formulario input[name="name"]{
+	width: 295px;
+        
+}
+
+#formulario input[name="description"]{
+	width: 293px;
+}
+
+
+
+#formulario input[type="submit"]{
+	font: 20px Verdana, Geneva, sans-serif;
+	width: 299px;
+}
+.border {
+   border: 2px solid #000; 
+}
+.margin {
+    margin: 20px 10px 10px 0;
+}
+
+

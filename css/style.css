@@ -1,0 +1,171 @@
+@charset "UTF-8";
+.container{
+
+    min-height: 800px;
+}
+.logo1{
+    background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#FF6347)) no-repeat;
+
+
+}
+.logo_foto{
+
+    width: 130px;
+    height: 100px;
+    margin-left: 0px;
+
+
+}
+
+.main-menu ul li{
+    float: left;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-menu ul li:hover{
+    font-size: 24px;
+    color: #e83e8c;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+.sub-menu{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+.div2{
+    border: 2px solid blueviolet; 
+}
+.div3{
+    border: 2px solid green; 
+}
+.div4{
+    border: 2px solid palevioletred; 
+
+}
+.icon{
+    width: 55px;
+    height: 32px;
+   border-radius: 10px 10px 10px 10px;/* efeito curva borda */   
+}
+
+.space1{
+    margin-top: 200px;
+    margin-bottom: 40px;
+    padding: 12px;
+    background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#FF6347)) no-repeat;
+    width:  100%;
+}
+
+.log{
+    margin-top: 1px;
+    padding-top: 1px;
+    float: top;
+    text-decoration: none;
+    text-justify: center;
+    font-size: 14px;
+    color: black;
+}
+.log:hover{
+    font-size: 16px;
+    font-weight: bold;
+    color: purple;
+
+}
+.subs{
+    margin-top: 1px;
+    padding-top: 1px;
+    float: top;
+    text-decoration: none;
+    text-justify: center;
+    font-size: 14px;
+    color: black;
+
+}
+.subs:hover{
+    font-size: 16px;
+    font-weight: bold;
+    color: purple;
+}
+
+.login_img{
+    margin-top: 1px;
+    padding: 1px;  
+    width: 15px;
+    height: 20px;
+
+}
+a{ 
+    text-decoration: none;
+}
+.label{
+    margin-top: 0px;
+}
+
+.login{
+    text-align: right;
+}
+
+.serv{
+    width: 200px;
+    height: 250px;
+}
+
+.service img{
+    width: 100%
+
+}
+
+.service label{
+    font-size: 18px;
+}
+
+.sun{
+
+    width:83px ;
+    height: 240px; 
+}
+
+p#about{
+    margin-top:150px;   
+    margin-right:20px; 
+    font-size: 25px;
+    font-family: Trebuchet;
+
+}
+
+p#about span{
+    color: #bd2130;
+    font-size: 35;
+    font-family: fantasy;
+
+
+}
+
+.yoga{
+    
+    margin-top: 130px;
+    width: 890px;
+    height: 300px;
+    
+}
+.fonts{
+    float: right;
+    
+}
+
+.bi{
+    
+    color: black;
+}
