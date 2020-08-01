@@ -1,23 +1,3 @@
-<?php
-    
-        require_once 'backend/Funcao.php';
-        require_once 'backend/Connection.php';
-        require_once 'backend/Customer.php';
-        $objcustomer = new Customer();
-        $objfc = new Funcao();
-        session_start();
-    IF($_SESSION['loggedin']=="yes"){
-       $objcustomer->CustomerLoggedin($_SESSION['customer']);
-    }else{
-        header('location:login-customer.php' );
-    }
-    #logout
-    if(!empty($_GET['logout'])  =='yes'){
-         $objcustomer->logout();
-    }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,7 +38,7 @@
                     </div>
                     <div class="col-md-4 login">   
                         
-                        <a href="index.php"><label class="subs">Logout</label></a>
+                        <a href="form-subscribe.php"><label class="subs">Logout</label></a>
                         
                     </div>       
                 </div> 
@@ -66,35 +46,23 @@
 
             <div class="row service">
                 <div class="col-md-5 menu">
-                </div>
-                <div class="col-md-3 menu"> 
-                </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <form name="formCad" action="customer-screen.php" method="post" class="margin">
-                    <label>Name: </label><br>
-                    <input type="text" name="name" required="required" value="<?= $objfc->treatCharacter(isset($prod['name']) ? ($prod['name']) : (''), 2) ?>"><br>
-                    <label>Email: </label><br>
-                    <input type="email" name="description" required="required"  value="<?= $objfc->treatCharacter((isset($prod['description'])) ? ($prod['description']) : (''), 2) ?>"><br>
-
-                    <br>
-
-                    <input type="hidden" name="prod" value="<?= (isset($prod['idProduct'])) ? ($objfc->base64($prod['idProduct'], 1)) : ('') ?>">
-                </form>
-                
-                
-                
-                
-                <div class="col-md-4 menu">   
+                    <Label>Name</Label>
+                    <input type="text" name="name"><Label>Name</Label>
+                    <Label>Surname</Label>
+                    <input type="text" name="surname">
+                    <Label>service</Label>
+                    <input type="text" name="sevice">
+                    <Label>Profissional</Label>
+                    <input type="text" name="staff">
+                    <Label>Date</Label>
+                    <input type="text" name="bookdata">
+                    <Label>Time</Label>
+                    <input type="text" name="time">
                     
+                    
+                    
+                    
+
                 </div>
             </div>
 

@@ -97,3 +97,8 @@ input[type=submit]{
     height: 5px;
     padding: 30px;
 }
+
+.manager{
+    margin-left: 40px;
+    text-decoration: none;
+}

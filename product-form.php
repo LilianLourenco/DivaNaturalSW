@@ -91,6 +91,7 @@ if (isset($_GET['acao'])) {
                     <div class="product">
                         <div class="nome"><?= $objfc->treatCharacter($rst['name'], 2) ?></div>
                         <div class="editar"><a href="?acao=edit&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Editar dados"><img src="_images/ico-editar.png" width="16" height="16" alt="Editar"></a></div>
+                        <div class="editar"><a href="?acao=edit&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Editar dados"><img src="_images/ico-editar.png" width="16" height="16" alt="Editar"></a></div>
                         <div class="excluir"><a href="?acao=delet&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Excluir esse dado"><img src="_images/ico-excluir.png" width="16" height="16" alt="Excluir"></a></div>
                     </div>
                 <?php } ?>
@@ -104,7 +105,9 @@ if (isset($_GET['acao'])) {
                     <input type="text" name="name" required="required" value="<?= $objfc->treatCharacter(isset($prod['name']) ? ($prod['name']) : (''), 2) ?>"><br>
                     <label>Description: </label><br>
                     <input type="description" name="description" required="required"  value="<?= $objfc->treatCharacter((isset($prod['description'])) ? ($prod['description']) : (''), 2) ?>"><br>
-
+                    <input type>
+                    
+                   
                     <br>
                     <input type="submit" name="<?= (isset($_GET['acao']) == 'edit') ? ('btAlterar') : ('btCadastrar') ?>" value="<?= (isset($_GET['acao']) == 'edit') ? ('Alterar') : ('Cadastrar') ?>">
                     <input type="hidden" name="prod" value="<?= (isset($prod['idProduct'])) ? ($objfc->base64($prod['idProduct'], 1)) : ('') ?>">

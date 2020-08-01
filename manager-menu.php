@@ -27,6 +27,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/control.css" rel="stylesheet" type="text/css" />
+        <link href="css/managerStyle.css" rel="stylesheet" type="text/css" />
         <link href= "css/bootstrap.min.css" rel= "stylesheet" type= "text/css"/>
         <script type="tex/javascript"src="js/bootstrap.min.js"></script>
         <script type="tex/javascript"src="js/jquery-3.4.1.min"></script>
@@ -72,17 +73,45 @@
                     </div>       
                 </div> 
             </nav>
-
+            <h2 class="txt">System Control</h2>
             <div class="row service">
                 <div class="col-md-12 menu">
                     <div class="col-md-6 menu">  
-                        <ul >
-                            <a href="Customer.php"><li>Client</li> </a>
-                            <a href="CheckBook.php"><li>Book</li> </a>
-                            <a href="service-form.php"><li>Service</li></a> 
-                            <a href="staff-form.php"><li>Staff form</li></a> 
-                            <a href="product-form.php"><li>Product</li> </a>
-                            <a href="stock-form.php" ><li>Stock</li> </a>
+                        <table class="tabela" border="1" cellspacing="3" cellpadding="1"   >
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="cost" >
+                                <tr>
+                                    <td ><a href="Customer.php"><li>Client</li> </a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="CheckBook.php"><li>Book</li> </a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="service-form.php"><li>Service</li></a> </td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="staff-form.php"><li>Staff</li></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>  <a href="product-form.php"><li>Product</li> </a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="stock-form.php" ><li>Stock</li> </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <ul  >
+                            
+                            
+                            
+                           
+                          
+                            
                         </ul>
             </div>
 

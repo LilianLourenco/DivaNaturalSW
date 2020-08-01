@@ -10,6 +10,7 @@ $objstaff = new Staff();
 
 if(isset($_POST['btRegister'])){
      if($objstaff->queryInsert($_POST)== 'ok'){
+         echo '<sript type="text/javascript">alert("Registration successful") </script>';
          header("Location: staff-form.php ");
          
      }else{

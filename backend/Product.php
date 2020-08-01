@@ -27,7 +27,7 @@ class Product {
     public function querySeleciona($dado){
         try{
             $this->idProduct = $this->objfc->base64($dado, 2);
-            $cst = $this->con->connect()->prepare("SELECT idProduct, name, description FROM `tbl_product` WHERE `idProduct` = :idProduct;");
+            $cst = $this->con->connect()->prepare("SELECT idProduct, name, description,dtregister FROM `tbl_product` WHERE `idProduct` = :idProduct;");
             $cst->bindParam(":idProduct", $this->idProduct, PDO::PARAM_INT);
             $cst->execute();
             return $cst->fetch();
@@ -38,7 +38,7 @@ class Product {
     
     public function querySelect(){
         try{
-            $cst = $this->con->connect()->prepare("SELECT `idProduct`, `name`,`description` FROM `tbl_product`;");
+            $cst = $this->con->connect()->prepare("SELECT `idProduct`, `name`,`description`, `dtregister` FROM `tbl_product`;");
             $cst->execute();
             return $cst->fetchAll();
         } catch (PDOException $ex) {
