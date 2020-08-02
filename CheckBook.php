@@ -45,21 +45,31 @@
             </nav>
 
             <div class="row service">
-                <div class="col-md-5 menu">
+                <div class="col-md-5 menu"></br></br></br>
                     <Label>Name</Label>
-                    <input type="text" name="name"><Label>Name</Label>
+                    <input type="text" name="name">
                     <Label>Surname</Label>
                     <input type="text" name="surname">
-                    <Label>service</Label>
-                    <input type="text" name="sevice">
+                    <label for="service">Choose a service:</label>
+                        <select id="cars" name="carlist" form="carform">
+                            <option value="massage">Massage</option>
+                            <option value="botox">Botox</option>
+                            <option value="eyes_tatoo">Eyes Tatoo</option>
+                            <option value="Laser_waxing">Laser waxing</option>
+                            <option value="eyesbrown">Design Eyesbrown</option>
+                            <option value="acne">Acne Treatment</option>
+                            <option value="waxing">Waxing</option>
+                            <option value="massage_reduction">Massage Reduction</option>
+                            <option value="artifitial_sunbathing">Artifitial Sunbathing</option>
+                        </select></br>
                     <Label>Profissional</Label>
                     <input type="text" name="staff">
                     <Label>Date</Label>
-                    <input type="text" name="bookdata">
+                    <input type="date" name="bookdata">
                     <Label>Time</Label>
-                    <input type="text" name="time">
+                    <input type="datetime" name="time"></br>
                     
-                    
+                    <input type="submit" name="btRegister" value="Register">
                     
                     
 
