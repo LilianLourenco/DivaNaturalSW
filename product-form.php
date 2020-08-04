@@ -90,7 +90,7 @@ if (isset($_GET['acao'])) {
                 <?php foreach ($objprod->querySelect() as $rst) { ?>
                     <div class="product">
                         <div class="nome"><?= $objfc->treatCharacter($rst['name'], 2) ?></div>
-                        <div class="editar"><a href="?acao=edit&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Editar dados"><img src="_images/ico-editar.png" width="16" height="16" alt="Editar"></a></div>
+                        <div class="editar"><a href="?acao=edit&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="More information"><img src="_images/search.png" width="16" height="16" alt="Editar"></a></div>
                         <div class="editar"><a href="?acao=edit&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Editar dados"><img src="_images/ico-editar.png" width="16" height="16" alt="Editar"></a></div>
                         <div class="excluir"><a href="?acao=delet&prod=<?= $objfc->base64($rst['idProduct'], 1) ?>" title="Excluir esse dado"><img src="_images/ico-excluir.png" width="16" height="16" alt="Excluir"></a></div>
                     </div>

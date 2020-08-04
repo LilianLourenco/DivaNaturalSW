@@ -27,13 +27,13 @@
 
 #lista .product .nome{
 	float: left;
-	width: 65%;
+	width: 42%;
 }
 
 #lista .product .editar{
 	float: left;
 	margin: 0 0 0 10px;
-        width: 10%;
+        width: 13%;
 }
 
 #lista .product .excluir{
@@ -72,6 +72,8 @@
 .border {
    border: 2px solid #000; 
 }
-table.margin {
+.margin {
     margin: 20px 10px 10px 0;
 }
+
+

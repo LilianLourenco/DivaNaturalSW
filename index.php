@@ -91,9 +91,9 @@
 
 
                 <div class="col-md-4 col-lg-4 col-xs-12 text-center">   
-                    <a href="eyes-tatoo.php">
+                    <a href="microblading.php">
                         <img src="_images/eyebrow-tatoo.jpg" alt=" service">
-                        <label>Eye-tatoo</label>
+                        <label>Microblading</label>
                     </a>
                 </div>       
 
@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="col-md-4 col-lg-4 col-xs-12 text-center ">   
-                    <a href="eyes-tatoo.php">
+                    <a href="eyebrown-design.php">
                         <img src="_images/design-eyesbrows.jpg" alt=" service">
                         <label>Design Eyesbrown</label>
                     </a>
@@ -140,8 +140,8 @@
 
                 <div class="col-md-4 col-lg-4 col-xs-12 text-center ">   
                     <a href="artifitial-sunbathing.php">
-                        <img class="sun"src="_images/sunbathing.jpg" alt=" service">
-                        <label>Artifitial Sunbathing</label>
+                        <img class="sun"src="_images/glow.jpg" alt=" service">
+                        <label>Natural Glow </label>
                     </a>
                 </div>
 
