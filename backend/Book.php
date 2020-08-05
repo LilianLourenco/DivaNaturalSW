@@ -24,9 +24,13 @@ class Book {
     }
 
     
-    public function querySelect($data) {
+    public function insert($data) {
+        
+        
         try {
-            
+            $this->idcustomer = $this->$data['idcustomer'];
+            $this->idstaff = $this->$data['idstaff'];
+            $cst = $this->con->connect()->prepare("insert into `tbl_book` (`idcustomer`, idstaff`)values(:idcustomer, idstaff;)");
         } catch (PDOExceptionException $ex) {
             return 'error' . $ex->getMessage();
         }

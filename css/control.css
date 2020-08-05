@@ -102,3 +102,19 @@ input[type=submit]{
     margin-left: 40px;
     text-decoration: none;
 }
+
+form #Form1{
+    font-family:sans-serif;
+    
+    
+}
+
+form h1{
+   margin-top: 70px;
+   font-family:monospace;
+}
+
+
+form#customer{
+    color:red;
+}

@@ -65,7 +65,7 @@ class Customer extends Person {
 
 
 
-           $cst = $this->con->connect()->prepare("INSERT INTO `tbl_customer` (`name`,`surname`,`username`,`email`,`sex`,
+            $cst = $this->con->connect()->prepare("INSERT INTO `tbl_customer` (`name`,`surname`,`username`,`email`,`sex`,
                 `password`, `birthday`, `dtregister`,`street` ,`city`, `zip_cod`,`country`, `phone_number`,`mobile`) VALUES
                     (:name, :surname, :username, :email, :sex, :password, 
                     :birthday, :dtregister, :street, :city, :zip_cod, :country, :phone_number, :mobile);");
@@ -146,7 +146,15 @@ class Customer extends Person {
                  $rst = $cst->fetch();
                  $_SESSION['loggedin']='yes';
                  $_SESSION['customer'] = $rst['idcustomer'];
-                 header('location: customer-screen.php');
+                 $_SESSION['name'] = $rst['name'];
+                 $_SESSION['surname'] = $rst['surname'];
+                 if($rst['level'] == 1){
+                     header('location: custo.php');
+                 }else if($rst['level'] == 2){
+                     header('location: customer-screen.php');
+                 }else{
+                    header('location: customer-screen.php');
+                }
                  
              }
          } catch (PDOException $ex) {
@@ -157,11 +165,21 @@ class Customer extends Person {
      
      
      public function CustomerLoggedin($dado){
-		$cst = $this->con->connect()->prepare("SELECT `idcustomer`, `name`, `email` FROM `tbl_customer` WHERE `idcustomer` = :idcustomer;");
+		$cst = $this->con->connect()->prepare("SELECT `idcustomer`, `name`, `email`, `surname`, `mobile`, `birthday`,`street`,`city`,`zip_cod`,`country` FROM `tbl_customer` WHERE `idcustomer` = :idcustomer;");
 		$cst->bindParam(':idcustomer', $dado, PDO::PARAM_INT);
 		$cst->execute();
 		$rst = $cst->fetch();
 		$_SESSION['name'] = $rst['name'];
+                $_SESSION['surname'] = $rst['surname'];
+                $_SESSION['email'] = $rst['email'];
+                $_SESSION['mobile'] = $rst['mobile'];
+                $_SESSION['birthday'] = $rst['birthday'];
+                $_SESSION['street'] = $rst['street'];
+                $_SESSION['city'] = $rst['city']; 
+                $_SESSION['zip_cod'] = $rst['zip_cod']; 
+                $_SESSION['country'] = $rst['country']; 
+                
+                                
 	}
 	
 	public function logout(){

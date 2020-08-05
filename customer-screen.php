@@ -1,20 +1,21 @@
 <?php
-    
-        require_once 'backend/Funcao.php';
-        require_once 'backend/Connection.php';
-        require_once 'backend/Customer.php';
-        $objcustomer = new Customer();
-        $objfc = new Funcao();
-        session_start();
-    IF($_SESSION['loggedin']=="yes"){
-       $objcustomer->CustomerLoggedin($_SESSION['customer']);
-    }else{
-        header('location:login-customer.php' );
-    }
-    #logout
-    if(!empty($_GET['logout'])  =='yes'){
-         $objcustomer->logout();
-    }
+require_once 'backend/Funcao.php';
+require_once 'backend/Connection.php';
+require_once 'backend/Customer.php';
+$objcustomer = new Customer();
+$objfc = new Funcao();
+session_start();
+IF ($_SESSION['loggedin'] == "yes") {
+
+
+    $objcustomer->CustomerLoggedin($_SESSION['customer']);
+} else {
+    header('location:login-customer.php');
+}
+#logout
+if (!empty($_GET['logout']) == 'yes') {
+    $objcustomer->logout();
+}
 ?>
 
 
@@ -57,47 +58,70 @@
 
                     </div>
                     <div class="col-md-4 login">   
-                        
+                        <h3><?php echo "Welcome  " . $_SESSION['name']; ?></h3>
                         <a href="index.php"><label class="subs">Logout</label></a>
-                        
+
                     </div>       
                 </div> 
             </nav>
 
-            <div class="row service">
-                <div class="col-md-5 menu">
-                </div>
-                <div class="col-md-3 menu"> 
-                </div>
+            
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
+
+
+
                 <form name="formCad" action="customer-screen.php" method="post" class="margin">
-                    <label>Name: </label><br>
-                    <input type="text" name="name" required="required" value="<?= $objfc->treatCharacter(isset($prod['name']) ? ($prod['name']) : (''), 2) ?>"><br>
-                    <label>Email: </label><br>
-                    <input type="email" name="description" required="required"  value="<?= $objfc->treatCharacter((isset($prod['description'])) ? ($prod['description']) : (''), 2) ?>"><br>
-
-                    <br>
-
-                    <input type="hidden" name="prod" value="<?= (isset($prod['idProduct'])) ? ($objfc->base64($prod['idProduct'], 1)) : ('') ?>">
-                </form>
-                
-                
-                
-                
-                <div class="col-md-4 menu">   
                     
-                </div>
-            </div>
+                    <div class="row service">
+                <div class="col-md-9 menu">    
 
+                    <h1>My data</h1>
+                    
+                        <label>Name: </label><br>
+                        <input type="text" name="name"value="<?php echo $_SESSION['name']; ?> <?php echo $_SESSION['surname']; ?>" >                                        
+                        <label>Mobile Number: </label><br>
+                        <input type="text" name="mobile"value="<?php echo $_SESSION['mobile']; ?> " >
+                        <label>Email: </label><br>
+                        <input type="text" name="email"value="<?php echo $_SESSION['email']; ?> " >
+                       <label>Birthday: </label><br>
+                        <input type="text"  value="<?php echo $_SESSION['birthday']; ?> ">
+                       <label>Address: </label><br>
+                        <input type="text"  value="<?php echo $_SESSION['street']; ?> <?php echo $_SESSION['city']; ?> "><br>
+                        <input type="text"  value="<?php echo $_SESSION['zip_cod']; ?> <?php echo $_SESSION['country']; ?> ">
+
+                    </div>
+                    <div class="col-md-3 menu"> 
+
+
+
+
+
+
+                        <h1>My account</h1><br>
+                        <table id="customer">
+                            
+                            <ul>
+                            
+                                <li>Book Service</li>
+                                <li>My request</li>
+                                <li>My records</li>
+                                <li>Update Data</li>
+                                <li>Logout</li>
+                            </ul>
+                        </table>
+                    
             </div>
+        </form>
+
+
+
+
+        <div class="col-md-4 menu">   
+
         </div>
-    </body>
+    
+
+</div>
+</div>
+</body>

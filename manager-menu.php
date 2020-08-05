@@ -73,34 +73,32 @@
                     </div>       
                 </div> 
             </nav>
-            <h2 class="txt">System Control</h2>
+            <h3 class="txt">System Control</h3>
             <div class="row service">
                 <div class="col-md-12 menu">
                     <div class="col-md-6 menu">  
                         <table class="tabela" border="1" cellspacing="3" cellpadding="1"   >
                             <thead>
-                                <tr>
-                                    <th></th>
-                                </tr>
+                                
                             </thead>
                             <tbody class="cost" >
                                 <tr>
-                                    <td ><a href="Customer.php"><li>Client</li> </a></td>
+                                    <td ><a href="Customer.php"><li id="cli">Client</li> </a></td><tr>
                                 </tr>
                                 <tr>
-                                    <td><a href="CheckBook.php"><li>Book</li> </a></td>
+                                    <td><a href="CheckBook.php"><li id="cli">Book</li> </a></td><tr>
                                 </tr>
                                 <tr>
-                                    <td><a href="service-form.php"><li>Service</li></a> </td>
+                                    <td><a href="service-form.php"><li id="cli">Service</li></a> </td><tr>
                                 </tr>
                                 <tr>
-                                    <td> <a href="staff-form.php"><li>Staff</li></a> </td>
+                                    <td> <a href="staff-form.php"><li id="cli">Staff</li></a> </td><tr>
                                 </tr>
                                 <tr>
-                                    <td>  <a href="product-form.php"><li>Product</li> </a></td>
+                                    <td>  <a href="product-form.php"><li id="cli">Product</li> </a></td><tr>
                                 </tr>
                                 <tr>
-                                    <td><a href="stock-form.php" ><li>Stock</li> </a></td>
+                                    <td><a href="stock-form.php" ><li id="cli">Stock</li> </a></td><tr>
                                 </tr>
                             </tbody>
                         </table>

@@ -52,8 +52,8 @@
                     <input type="text" name="surname">
                     <label for="service">Choose a service:</label>
                         <select id="cars" name="carlist" form="carform">
-                            <option value="massage">Massage</option>
-                            <option value="botox">Botox</option>
+                            <option value="1">Massage</option>
+                            <option value="2">Botox</option>
                             <option value="eyes_tatoo">Eyes Tatoo</option>
                             <option value="Laser_waxing">Laser waxing</option>
                             <option value="eyesbrown">Design Eyesbrown</option>

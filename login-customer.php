@@ -28,7 +28,7 @@ if(isset($_POST['btLogin'])){
         <div class="container"> 
         <div id="form-body">
             <h1> Login</h1>
-        <form method="POST" action="">
+        <form method="POST" action="customer-screen.php">
             
             <input type="email" name="email" placeholder="username">
             <input type="password" name="password"placeholder="password">
@@ -36,7 +36,7 @@ if(isset($_POST['btLogin'])){
             <a  href="form-subscribe.php"<strong>Subscribe here</strong></a>
             
         </form>
-            <?php if(isset($_GET["login"]) == "error"){ ?>
+             <?php if(!empty($_GET["login"]) == "error"){ ?>
         <div class="alert alert-danger alert-block alert-aling" role="alert">Email or password is wrong</div>
         <?php } ?>
         </div>

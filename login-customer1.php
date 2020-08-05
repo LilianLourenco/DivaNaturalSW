@@ -2,12 +2,12 @@
 require_once 'backend/Connection.php';
 require_once 'backend/Person.php';
 require_once 'backend/Funcao.php';
-require_once 'backend/Staff.php';
+require_once 'backend/Customer.php';
 
 
-$objstaff = new Staff();
+$objcustomer = new Customer();
 if(isset($_POST['btLogin'])){
-    $objstaff->staffLogin($_POST);
+    $objcustomer->customerLogin($_POST);
 }
 ?>
 <!DOCTYPE html>
@@ -16,8 +16,10 @@ if(isset($_POST['btLogin'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
         <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/control.css" rel="stylesheet" type="text/css" />
+        <link href="css/login.css" rel="stylesheet" type="text/css" />
+        
         <link href= "css/bootstrap.min.css" rel= "stylesheet" type= "text/css"/>
         <script type="tex/javascript"src="js/bootstrap.min.js"></script>
         <script type="tex/javascript"src="js/jquery-3.4.1.min"></script>
@@ -26,14 +28,16 @@ if(isset($_POST['btLogin'])){
     </head>
     <body>
         <div class="container"> 
-        <div id="form-body">
-           
+            <div class="box-login"> 
+                <div class="cover">
+                </div>
+            <h1> Login</h1>
         <form method="POST" action="">
-            <h3>Restrict Access</h3>
+            
             <input type="email" name="email" placeholder="username">
             <input type="password" name="password"placeholder="password">
-            <input type="submit" value="Login" name="btLogin">
-            
+            <button class="btn-login" value="Login" name="btLogin">Login </button>
+            <a class="sub" href="form-subscribe.php"<strong>Subscribe here</strong></a>
             
         </form>
             <?php if(!empty($_GET["login"]) == "error"){ ?>

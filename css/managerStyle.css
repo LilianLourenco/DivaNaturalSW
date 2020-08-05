@@ -1,22 +1,39 @@
 .tabela{
-    
+
     text-decoration: none;
-     list-style-type: none;
-     width: 300px;
-     padding: 100px;
-     margin-top: 100px;
-     height: 330px;
-     margin-left   : 180px;
-     font-size: 25px;
-    
-     
+    list-style-type: none;
+    width: 300px;
+    padding: 100px;
+    margin-top: 100px;
+    height: 330px;
+    margin-left   : 180px;
+    font-size: 25px;
+
+
 }
 
 .txt{
-   margin-top: 100px; 
-   margin-left: 50px;
+    margin-top: 100px; 
+    margin-left: 50px;
+    font-family: fantasy;
 }
 
 .cost{
-    color: red;
+    color: #990000;
+    text-decoration: none;
+    background-color: #e4606d;
+}
+#cli{
+    color:#fff;
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#cli:hover{    
+    text-decoration: none;
+    font-size: 24px;    
+    font-weight: bold;
+    font-family: fantasy;
 }

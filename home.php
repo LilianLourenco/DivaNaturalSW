@@ -159,7 +159,7 @@
                 <div class="col-md-7 footer">
                     <img class="icon" src="_images/facebook.png">
                     <img class="icon" src="_images/instagram.png">
-
+                    <!--<a href="https://www.instagram.com/divahenatural/"><img class="icon" src="_images/instagram.png"></a>-->
 
 
                 </div>
