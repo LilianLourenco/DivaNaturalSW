@@ -59,19 +59,10 @@ if (!empty($_GET['logout']) == 'yes') {
 
                     </div>
                     <div class="col-md-4 login">   
-                        <h4 id="welc"><?php echo "Welcome  " . $_SESSION['name']; ?></h4>
-                        
-
-                    </div>       
+                        <h4 id="welc"><?php echo "Customer id:  " . $_SESSION['idcustomer']; ?> - <?php echo "Welcome  " . $_SESSION['name']; ?> - <?php echo "Level" . $_SESSION['level']; ?> </h4>
+         </div>       
                 </div> 
             </nav>
-
-            
-                
-
-
-
-
                 <form name="formCad" action="customer-screen.php" method="post" class="margin">
                     
                     <div class="row service">
@@ -120,7 +111,7 @@ if (!empty($_GET['logout']) == 'yes') {
                                 </tr>
                                 
                                 <tr>
-                                    <td id="text1"> <a href="index.php"><li id="cos">Logout</li></a> </td><tr>
+                                    <td id="text1"> <a href="Logout.php"><li id="cos">Logout</li></a> </td><tr>
                                 </tr>
                                
                             </tbody>

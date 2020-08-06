@@ -10,8 +10,9 @@ IF ($_SESSION['loggedin'] == "yes") {
 
 
     $objcustomer->CustomerLoggedin($_SESSION['customer']);
+    
 } else {
-    header('location:login-customer.php');
+    header('location:index.php');
 }
 #logout
 if (!empty($_GET['logout']) == 'yes') {
@@ -58,49 +59,44 @@ if (!empty($_GET['logout']) == 'yes') {
 
                     </div>
                     <div class="col-md-4 login">   
-
-                        <a href="index.php"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
-                            <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
-                            </svg></a>
-
+                        
+                        <a href="form-subscribe.php"><label class="subs">Logout</label></a>
+                        
                     </div>       
                 </div> 
             </nav>
 
             <div class="row service">
-                <?php echo "Id:  " . $_SESSION['idstaff']; ?> - <?php echo "Welcome  " . $_SESSION['name']; ?> - <?php echo "Welcome  " . $_SESSION['level']; ?> 
                 <div class="col-md-5 menu"></br></br></br>
                     <Label>Name   </Label>
                     <input type="text" name="name"value="<?php echo $_SESSION['name']; ?> <?php echo $_SESSION['surname']; ?>" >
-
+                    
                     <label for="service">Choose a service:</label>
-                    <select id="cars" name="carlist" form="carform">
-                        <option value="1">Massage</option>
-                        <option value="2">Botox</option>
-                        <option value="eyes_tatoo">Eyes Tatoo</option>
-                        <option value="Laser_waxing">Laser waxing</option>
-                        <option value="eyesbrown">Design Eyesbrown</option>
-                        <option value="acne">Acne Treatment</option>
-                        <option value="waxing">Waxing</option>
-                        <option value="massage_reduction">Massage Reduction</option>
-                        <option value="artifitial_sunbathing">Artifitial Sunbathing</option>
-                    </select></br>
+                        <select id="cars" name="carlist" form="carform">
+                            <option value="1">Massage</option>
+                            <option value="2">Botox</option>
+                            <option value="eyes_tatoo">Eyes Tatoo</option>
+                            <option value="Laser_waxing">Laser waxing</option>
+                            <option value="eyesbrown">Design Eyesbrown</option>
+                            <option value="acne">Acne Treatment</option>
+                            <option value="waxing">Waxing</option>
+                            <option value="massage_reduction">Massage Reduction</option>
+                            <option value="artifitial_sunbathing">Artifitial Sunbathing</option>
+                        </select></br>
                     <Label>Profissional</Label>
                     <input type="text" name="staff">
                     <Label>Date</Label>
                     <input type="date" name="bookdata">
                     <Label>Time</Label>
                     <input type="datetime" name="time"></br>
-
+                    
                     <input type="submit" name="btRegister" value="Register">
-
-
+                    
+                    
 
                 </div>
             </div>
 
+            </div>
         </div>
-    </div>
-</body>
+    </body>

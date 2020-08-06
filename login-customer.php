@@ -34,7 +34,7 @@ if(isset($_POST['btLogin'])){
             <input type="password" name="password"placeholder="password">
             <input type="submit" value="Login" name="btLogin">
             <a  href="form-subscribe.php"<strong>Subscribe here</strong></a>
-            <a  href="login.php"<strong>Administrator</strong></a>
+       
             
         </form>
             <?php if(isset($_GET["login"]) == "error"){ ?>

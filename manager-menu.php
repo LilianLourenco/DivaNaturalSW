@@ -1,22 +1,19 @@
 <?php
-    
-    
-        require_once 'backend/Connection.php';
-        require_once 'backend/Staff.php';
-        $objstaff = new Staff();
+require_once 'backend/Connection.php';
+require_once 'backend/Staff.php';
+$objstaff = new Staff();
 
-        session_start();
-        
-    IF($_SESSION['loggedin']=="yes"){
-       $objstaff->StaffLoggedin($_SESSION['staff']);
-       
-    }else{
-        header('location:login.php' );
-    }
-    #logout
-    if(!empty($_GET['logout'])  =='yes'){
-         $objstaff->logout();
-    }
+session_start();
+
+IF ($_SESSION['loggedin'] == "yes") {
+    $objstaff->StaffLoggedin($_SESSION['staff']);
+} else {
+    header('location:login.php');
+}
+#logout
+if (!empty($_GET['logout']) == 'yes') {
+    $objstaff->logout();
+}
 ?>
 
 <!DOCTYPE html>
