@@ -27,6 +27,7 @@ if (!empty($_GET['logout']) == 'yes') {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/control.css" rel="stylesheet" type="text/css" />
+        <link href="css/customer.css" rel="stylesheet" type="text/css" />
         <link href= "css/bootstrap.min.css" rel= "stylesheet" type= "text/css"/>
         <script type="tex/javascript"src="js/bootstrap.min.js"></script>
         <script type="tex/javascript"src="js/jquery-3.4.1.min"></script>
@@ -50,7 +51,7 @@ if (!empty($_GET['logout']) == 'yes') {
                     <div class="col-md-6 menu">  
                         <ul>
                             <a href="home.php"><li>Home</li> </a>
-                            <a href="manager-menu.php"><li>Service</li></a> 
+                            
                             <a href="blog.php"><li>Blog</li></a> 
                             <a href="contact.php"><li>Contact</li> </a>
                             <a href="aboutus.php" ><li>About us</li> </a>
@@ -58,8 +59,8 @@ if (!empty($_GET['logout']) == 'yes') {
 
                     </div>
                     <div class="col-md-4 login">   
-                        <h3><?php echo "Welcome  " . $_SESSION['name']; ?></h3>
-                        <a href="index.php"><label class="subs">Logout</label></a>
+                        <h4 id="welc"><?php echo "Welcome  " . $_SESSION['name']; ?></h4>
+                        
 
                     </div>       
                 </div> 
@@ -98,16 +99,31 @@ if (!empty($_GET['logout']) == 'yes') {
 
 
 
-                        <h1>My account</h1><br>
-                        <table id="customer">
-                            
-                            <ul>
-                            
-                                <li>Book Service</li>
-                                <li>My request</li>
-                                <li>My records</li>
-                                <li>Update Data</li>
-                                <li>Logout</li>
+                        <h1 id="dif">My account</h1>
+                        <table class="tabela" border="1" cellspacing="3" cellpadding="1" >
+                             
+                                <thead>
+                                
+                            </thead>
+                            <tbody class="costumer" >
+                                <tr>
+                                    <td id="text1"><a href="CheckBook.php"><li id="cos">Book Service</li> </a></td><tr>
+                                </tr>
+                                <tr>
+                                    <td id="text1"><a href="customer-product.php"><li id="cos">My request</li> </a></td><tr>
+                                </tr>
+                                <tr>
+                                    <td id="text1"><a href="customer-product.php"><li id="cos">My records</li></a> </td><tr>
+                                </tr>
+                                <tr>
+                                    <td id="text1"> <a href="customer-screen.php"><li id="cos">Update Data</li></a> </td><tr>
+                                </tr>
+                                
+                                <tr>
+                                    <td id="text1"> <a href="index.php"><li id="cos">Logout</li></a> </td><tr>
+                                </tr>
+                               
+                            </tbody>
                             </ul>
                         </table>
                     

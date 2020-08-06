@@ -65,7 +65,7 @@ class Customer extends Person {
 
 
 
-            $cst = $this->con->connect()->prepare("INSERT INTO `tbl_customer` (`name`,`surname`,`username`,`email`,`sex`,
+           $cst = $this->con->connect()->prepare("INSERT INTO `tbl_customer` (`name`,`surname`,`username`,`email`,`sex`,
                 `password`, `birthday`, `dtregister`,`street` ,`city`, `zip_cod`,`country`, `phone_number`,`mobile`) VALUES
                     (:name, :surname, :username, :email, :sex, :password, 
                     :birthday, :dtregister, :street, :city, :zip_cod, :country, :phone_number, :mobile);");
@@ -146,15 +146,7 @@ class Customer extends Person {
                  $rst = $cst->fetch();
                  $_SESSION['loggedin']='yes';
                  $_SESSION['customer'] = $rst['idcustomer'];
-                 $_SESSION['name'] = $rst['name'];
-                 $_SESSION['surname'] = $rst['surname'];
-                 if($rst['level'] == 1){
-                     header('location: custo.php');
-                 }else if($rst['level'] == 2){
-                     header('location: customer-screen.php');
-                 }else{
-                    header('location: customer-screen.php');
-                }
+                 header('location: customer-screen.php');
                  
              }
          } catch (PDOException $ex) {
@@ -162,7 +154,7 @@ class Customer extends Person {
          }
          
      }
-     
+
      
      public function CustomerLoggedin($dado){
 		$cst = $this->con->connect()->prepare("SELECT `idcustomer`, `name`, `email`, `surname`, `mobile`, `birthday`,`street`,`city`,`zip_cod`,`country` FROM `tbl_customer` WHERE `idcustomer` = :idcustomer;");

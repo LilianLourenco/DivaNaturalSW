@@ -29,8 +29,7 @@
                     </div>
                     <div class="col-md-6 menu">  
                         <ul>
-                            <a href="home.php"><li>Home</li> </a>
-                            <a href="service.php"><li>Service</li></a> 
+                            <a href="home.php"><li>Home</li> </a>                            
                             <a href="blog.php"><li>Blog</li></a> 
                             <a href="contact.php"><li>Contact</li> </a>
                             <a href="aboutus.php" ><li>About us</li> </a>

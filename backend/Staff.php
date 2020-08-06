@@ -131,7 +131,7 @@ class Staff extends Person {
                  $rst = $cst->fetch();
                  $_SESSION['loggedin']='yes';
                  $_SESSION['staff'] = $rst['idstaff'];
-                 header('location: manager-menu.php');
+                 header('location: home-staff.php');
                  
              }
          } catch (PDOException $ex) {
@@ -148,14 +148,14 @@ class Staff extends Person {
 		$cst->execute();
 		$rst = $cst->fetch();
                 #put the data in session
-		$_SESSION['name'] = $rst['name'];
-                $_SESSION['email'] = $rst['email'];
+		$_SESSION['name'] = $rst['name'];                                                
+                $_SESSION['surname'] = $rst['surname'];
                 
 	}
 	
 	public function logout(){
 		session_destroy();
-		header ('location: login.php');
+		header ('location: index.php');
 	}
 	
 }
