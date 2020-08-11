@@ -10,9 +10,7 @@
     
 }
 
-
-
-input {
+input, select {
   
     height: 45px;
    display: block;
@@ -24,7 +22,8 @@ input {
    padding: 10px 20px;
    background-color: rgba (255,255,255,0,0.1);
    outline: none;
-}             
+}        
+   
 .cont{
     margin-top: 100px;
 }
@@ -58,7 +57,7 @@ a{
 }
 
 input[type=submit]{
-   background-color: #10707f;
+   background-color: #8A0808;
    border: none;
    color: white;
    outline: none;

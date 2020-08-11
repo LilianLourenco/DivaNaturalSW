@@ -31,14 +31,18 @@ class Staff extends Person {
         return $this->attribute;
     }
 
-    public function querySelect($data) {
+   public function querySelect() {
         try {
-            
-        } catch (PDOExceptionException $ex) {
-            return 'error' . $ex->getMessage();
+            $cst = $this->con->connect()->prepare("SELECT `idstaff`,`name`, `surname`,`staff_number`,`email` FROM `tbl_staff`;");
+            $cst->execute();
+            return $cst->fetchAll();
+        } catch (PDOException $ex) {
+            return 'erro ' . $ex->getMessage();
         }
     }
 
+    
+    
     public function queryInsert($data) {
         try {
             $this->name = $this->objfc->treatCharacter($data['name'], 1);

@@ -1,10 +1,10 @@
 <?php
-    require_once 'PHPMailer-master/PHPMailerAutoload.php';
+   require_once 'include';
 
 class Funcao {
-
+    private $objmail;
     public function __construct() {
-       $ojtmail = new PHPMailer();
+       $this->objmail = new PHPMailer();
     }
 
     public function treatCharacter($vlr, $tipo) {
@@ -46,21 +46,21 @@ class Funcao {
         $this->objmail->SMTPAuth = true;
         $this->objmail->SMTPSecure = 'tls';
         $this->objmail->Port = 587;
-        $this->objmail->Host = 'smtpt.dominio.com.br';
-        $this->objmail->Username = 'email@dominio.com.br';
-        $this->objmail->Password = 'senha12345';
+        $this->objmail->Host = 'smtp.gmail.com';
+        $this->objmail->Username = 'divahhnatural@gmail.com';
+        $this->objmail->Password = 'mudar1234';
         $this->objmail->ContentType = 'text/html; charset=utf-8';
-        $this->objmail->SetFrom('email@dominio.com.br', 'please do not answer');
-        $this->objmail->AddAddress('Divahenatural@gmail.com', 'test seding email');
-        $this->objmail->Subject = '' . $this->tratarCaracter($dados['subject'], 1) . '';
+        $this->objmail->SetFrom('divahhnatural@gmail.com', 'please do not answer');
+        $this->objmail->AddAddress('divahhnatuaral@gmail.com', 'test seding email');
+        $this->objmail->Subject = '' . $this->treatCharacter($dados['subject'], 1) . '';
 
-        $html = '<p><strong>Nome:</strong> ' . $this->tratarCaracter($dados['name'], 1) . '<br>';
+        $html = '<p><strong>Nome:</strong> ' . $this->treatCharacter($dados['name'], 1) . '<br>';
         $html .= '<strong>E-mail:</strong> ' . $dados['email'] . '<br>';
-        $html .= '<strong>Assunto:</strong> ' . $this->tratarCaracter($dados['subject'], 1) . '<br>';
+        $html .= '<strong>Assunto:</strong> ' . $this->treatCharacter($dados['subject'], 1) . '<br>';
         $html .= '<strong>Mensagem:</strong><br>';
-        $html .= $this->tratarCaracter($dados['mensagem'], 1) . '</p>';
+        //$html .= $this->treatCharacter($dados['mensagem'], 1) . '</p>';
 
-        $this->objmail->MsgHTML($html);
+        $this->objmail->MsgHtml($html);
 
         if (!$this->objmail->Send()) {
             echo "Mailer Error: " . $this->objmail->ErrorInfo;
