@@ -12,6 +12,7 @@ class Service {
     private $type_serv;
     private $session_min;
     private $session_max;
+    
     #private $serv_date;
 
     public function __construct() {

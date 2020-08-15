@@ -31,18 +31,16 @@ class Book {
 
     public function insert($data) {
         try {
-            print_r($data);
-            print_r(['$datebook']);
+           
+            //print_r($data);
+            
             $this->idcustomer = $data['idcustomer'];
-            $this->name = $this->objFunc->treatCharacter($data['name'], 1);
+            $this->name = $data['name'];
             $this->idstaff = $data['idstaff'];
             $this->idserv = $data['idserv'];
-            //$this->servname = $this->$data['servname'];
             $this->datebook = $data['datebook'];
             $this->times = $data['times'];
-            //$this->status = $data['status'];
-            $cst = $this->con->connect()->prepare("insert into `tbl_book` (`idcustomer`,`name`, idstaff`, `idserv`, `datebook`, `times`)values(:idcustomer,:name,:idstaff,:idserv,:datebook,:times;)");
-        } catch (PDOExceptionException $ex) {
+            $cst = $this->con->connect()->prepare("insert into `tbl_book` (`idcustomer`, `name`,`idstaff`, `idserv`, `datebook`, `times`) values(:idcustomer,:name,:idstaff,:idserv,:datebook,:times);");
             $cst->bindParam(":idcustomer", $this->idcustomer, PDO::PARAM_INT);
             $cst->bindParam(":name", $this->name, PDO::PARAM_STR);
             $cst->bindParam(":idstaff", $this->idstaff, PDO::PARAM_INT);
@@ -86,5 +84,8 @@ class Book {
             return 'erro ' . $ex->getMessage();
         }
     }
+    
+    
 
 }
+    

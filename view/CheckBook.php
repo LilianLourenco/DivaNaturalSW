@@ -36,6 +36,7 @@ if(isset($_POST['btnBook'])){
          header("Location: succefully-book.php ");
          
      }else{
+         echo $objBook->insert($_POST);
          echo '<sript type="text/javascript">alert("Registration fail") </script>';
      }
 }
@@ -125,14 +126,14 @@ if(isset($_POST['btnBook'])){
                     <Select name="times">
                         
                         <option> Available Time</option>
-                        <option value="1">8:00 - 9:00</option>
-                        <option value="2">9:00 - 10:00</option>
-                        <option value="3">10:00 - 11:00</option>
-                        <option value="4">11:00 - 12:00</option>
-                        <option value="5">13:00 - 14:00</option>
-                        <option value="6">14:00 - 15:00</option>
-                        <option value="7">15:00 - 16:00</option>
-                        <option value="8">16:00 - 17:00</option>
+                        <option value="8:00 - 9:00" name="times">8:00 - 9:00</option>
+                        <option value="9:00 - 10:00" name="times">9:00 - 10:00</option>
+                        <option value="10:00 - 11:00" name="times">10:00 - 11:00</option>
+                        <option value="11:00 - 12:00" name="times">11:00 - 12:00</option>
+                        <option value="13:00 - 14:00" name="times">13:00 - 14:00</option>
+                        <option value="14:00 - 15:00" name="times">14:00 - 15:00</option>
+                        <option value="15:00 - 16:00" name="times">15:00 - 16:00</option>
+                        <option value="16:00 - 17:00" name="times">16:00 - 17:00</option>
                     
                     </select></br>
                  <input type="submit" name="btnBook" value="Book">

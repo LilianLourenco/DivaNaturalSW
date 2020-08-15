@@ -1,14 +1,11 @@
 <?php
-//BUSCANDO A CLASSE
-require_once 'PHPMailer-master/PHPMailerAutoload.php';
-//INICIANDO A CLASSE
-class Funcao{
-	//ATRIBUTOS
-	private $objmail;
-	//CONTRUTOR
-	public function __construct(){
-		$this->objmail = new PHPMailer();		
-	}
+   require_once 'include';
+
+class Funcao {
+    private $objmail;
+    public function __construct() {
+       $this->objmail = new PHPMailer();
+    }
 
     public function treatCharacter($vlr, $tipo) {
         switch ($tipo) {
@@ -54,7 +51,7 @@ class Funcao{
         $this->objmail->Password = 'mudar1234';
         $this->objmail->ContentType = 'text/html; charset=utf-8';
         $this->objmail->SetFrom('divahhnatural@gmail.com', 'please do not answer');
-        $this->objmail->AddAddress('divahhnatural@gmail.com', 'test seding email');
+        $this->objmail->AddAddress('divahhnatuaral@gmail.com', 'test seding email');
         $this->objmail->Subject = '' . $this->treatCharacter($dados['subject'], 1) . '';
 
         $html = '<p><strong>Nome:</strong> ' . $this->treatCharacter($dados['name'], 1) . '<br>';
