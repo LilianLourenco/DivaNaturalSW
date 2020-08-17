@@ -33,6 +33,7 @@ $objBook = new Book();
 
 if(isset($_POST['btnBook'])){
      if($objBook->insert($_POST)== 'ok'){
+         
          header("Location: succefully-book.php ");
          
      }else{
