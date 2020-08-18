@@ -101,14 +101,18 @@ class Customer extends Person {
             
         }
     }
-
-    public function read() {
+    
+    
+    public function querySelectCustomer() {
         try {
-            
-        } catch (PDOExceptionException $ex) {
-            
+            $cst = $this->con->connect()->prepare("SELECT `idcustomer`,`name`, `surname`,`username`,`email` FROM `tbl_customer`;");
+            $cst->execute();
+            return $cst->fetchAll();
+        } catch (PDOException $ex) {
+            return 'erro ' . $ex->getMessage();
         }
     }
+  
 
     public function update($data) {
         
@@ -126,9 +130,7 @@ class Customer extends Person {
         
     }
 
-    public function listCustomer() {
-        
-    }
+    
 
     public function customerLogin($dado) {
         $this->email = $dado['email'];

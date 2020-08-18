@@ -82,8 +82,7 @@ class Service {
             $this->type_serv = $dados['type_serv'];
             $this->session_min = $dados['session_min'];
             $this->session_max = $dados['session_max'];
-            $cst = $this->con->connect()->prepare("UPDATE `tbl_service` SET  `servname` = :servname, `type_serv` = :type_serv,`session_min`=:session_min,"
-                    . " WHERE `idserv` = :idserv;");
+            $cst = $this->con->connect()->prepare("UPDATE `tbl_service` SET  `servname` = :servname, `type_serv` = :type_serv,`session_min`=:session_min,`session_max`=:session_max WHERE `idserv` = :idserv;");
             $cst->bindParam(":idserv", $this->idserv, PDO::PARAM_INT);
             $cst->bindParam(":servname", $this->servname, PDO::PARAM_STR);
             $cst->bindParam(":type_serv", $this->type_serv, PDO::PARAM_STR);

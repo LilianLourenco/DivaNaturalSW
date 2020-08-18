@@ -85,6 +85,17 @@ class Book {
         }
     }
     
+    public function querySelectbookcustomers() {
+        try {
+            $cst = $this->con->connect()->prepare("SELECT * FROM tbl_service"
+                    . "`;");
+            $cst->execute();
+            return $cst->fetchAll();
+        } catch (PDOException $ex) {
+            return 'erro ' . $ex->getMessage();
+        }
+    }
+    
     
 
 }

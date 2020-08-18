@@ -168,4 +168,43 @@ p#about span{
 .bi{
     
     color: black;
+/*}
+#social{
+  color: red; 
+  text-align: right;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.facebook{
+    padding-top: 1px;
+  color: red; 
+  margin-top: 10px;
+  width: 50%;
+  margin: 10px;
+}
+.instagram{
+    padding-top: 1px;
+       color: red; 
+   margin-top: 1px;
+  width: 1%;
+  margin-left: 10px;
+}
+
+    */
+    
+    
+}
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+footer#rodape p{
+    text-align: center;
+}
+
+video#filme1{
+    left: 575px;
+    top: 430px;
+    width: 354px;
 }

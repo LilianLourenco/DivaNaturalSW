@@ -1,16 +1,26 @@
 
 
-
-
-
-
 <?php
 require_once '../backend/Service.php';
 require_once '../backend/Funcao.php';
 require_once '../backend/Connection.php';
-
+require_once '../backend/Staff.php';
 $objserv = new Service();
 $objfc = new Funcao();
+$objstaff = new Staff();
+
+session_start();
+
+IF ($_SESSION['loggedin'] == "yes") {
+    $objstaff->StaffLoggedin($_SESSION['staff']);
+} else {
+    header('location:login.php');
+}
+#logout
+if (!empty($_GET['logout']) == 'yes') {
+    $objstaff->logout();
+}
+
 
 if (isset($_POST['btCadastrar'])) {
     if ($objserv->queryInsert($_POST) == 'ok') {
@@ -84,7 +94,8 @@ if (isset($_GET['acao'])) {
                     </div>
                     <div class="col-md-4 login">   
 
-                        <a href="form-subscribe.php"><label class="subs">Logout</label></a>
+                              <?php echo $_SESSION['name']?>
+                    <h4 id="welc"><a href="Logout.php"><li id="cos">Logout</li></a> <?php echo "Staff id:  " . $_SESSION['idstaff']; ?> - <?php echo "Welcome  " . $_SESSION['name']; ?> - <?php echo "Level" . $_SESSION['level']; ?> </h4>
 
                     </div>       
                 </div> 
@@ -119,7 +130,7 @@ if (isset($_GET['acao'])) {
             <input type="number" name="session_max" value="<?= $objfc->treatCharacter(isset($serv['session_max']) ? ($serv['session_max']) : (''), 2) ?>"><br>
             
                     <br>
-                    <input type="submit" name="<?= (isset($_GET['acao']) == 'edit') ? ('btAlterar') : ('btCadastrar') ?>" value="<?= (isset($_GET['acao']) == 'edit') ? ('Alterar') : ('Cadastrar') ?>">
+                    <input type="submit" name="<?= (isset($_GET['acao']) == 'edit') ? ('btAlterar') : ('btCadastrar') ?>" value="<?= (isset($_GET['acao']) == 'edit') ? ('Update') : ('Register') ?>">
                     <input type="hidden" name="serv" value="<?= (isset($serv['idserv'])) ? ($objfc->base64($serv['idserv'], 1)) : ('') ?>">
                 </form>
             </div>

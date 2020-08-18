@@ -2,9 +2,24 @@
 require_once '../backend/Product.php';
 require_once '../backend/Funcao.php';
 require_once '../backend/Connection.php';
+require_once '../backend/Staff.php';
 
 $objprod = new Product();
 $objfc = new Funcao();
+$objstaff = new Staff();
+
+session_start();
+
+IF ($_SESSION['loggedin'] == "yes") {
+    $objstaff->StaffLoggedin($_SESSION['staff']);
+} else {
+    header('location:login.php');
+}
+#logout
+if (!empty($_GET['logout']) == 'yes') {
+    $objstaff->logout();
+}
+
 
 if (isset($_POST['btCadastrar'])) {
     if ($objprod->queryInsert($_POST) == 'ok') {
@@ -77,7 +92,7 @@ if (isset($_GET['acao'])) {
                     </div>
                     <div class="col-md-4 login">   
 
-                        <a href="form-subscribe.php"><label class="subs">Logout</label></a>
+                        <h4 id="welc"><a href="Logout.php"><li id="cos">Logout</li></a> <?php echo "Staff id:  " . $_SESSION['idstaff']; ?> - <?php echo "Welcome  " . $_SESSION['name']; ?> - <?php echo "Level" . $_SESSION['level']; ?> </h4>
 
                     </div>       
                 </div> 

@@ -147,9 +147,9 @@ class Staff extends Person {
         
     }
 
-    public function logout() {
-        session_destroy();
-        header('location: index.php');
-    }
+//    public function logout() {
+//        session_destroy();
+//        header('location: index.php');
+//    }
 
 }

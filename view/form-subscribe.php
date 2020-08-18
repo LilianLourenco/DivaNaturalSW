@@ -61,10 +61,17 @@ if(isset($_POST['btnSubscribe'])){
             <input type="email" name="email"  >
             
             <label>Password:</label>
-            <input type="password" name="password" required="" >
+            <input type="password" name="password" required="" ><br>
             
-            <label>Sex:</label>
-            <input type="text" name="sex" required="" >
+            
+             <Select name="sex">
+                        
+                        <option> Sex:</option>
+                        <option value="Female" name="sex">Female</option>
+                        <option value="Male" name="sex">Male</option>
+                        
+             </select>            
+            
             
             <label>Birthday:</label>
             <input type="date" name="birthday"  >

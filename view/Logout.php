@@ -20,7 +20,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
   //unset($_SESSION['PrevUrl']);
   $logoutGoTo = "index.php";
   if ($logoutGoTo) {
-    $logoutGoTo = "view/index.php"; 
+    $logoutGoTo = "index.php"; 
     exit;
   }
 }

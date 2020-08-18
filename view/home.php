@@ -159,13 +159,10 @@
             </div>  
             <div class="row">
                 <div class="col-md-5 sp1"> </div>
-                <div class="col-md-7 footer">
-                    <img class="icon" src="../_images/facebook.png">
-                    <img class="icon" src="../_images/instagram.png">
-                    <!--<a href="https://www.instagram.com/divahenatural/"><img class="icon" src="_images/instagram.png"></a>-->
-
-
-                </div>
+            <footer id="rodape">
+                <p> Copyright 2020 - by Lilian Lourenco <br />
+                <p> <a  href="https://www.facebook.com/Divah-Natural-106912804464078">Facebook</a><a  href="https://www.instagram.com/divahenatural/">Instagram</a></p>
+            </footer>
 
             </div>
         </div>
